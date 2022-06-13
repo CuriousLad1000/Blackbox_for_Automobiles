@@ -1,0 +1,20 @@
+PC VERSION -- has sx4(obd),DB,test  no gps and accelero
+
+pi version has sx4(obd),dc,gps and accelero
+
+no error handling added
+
+all sx4 supported PIDs added
+
+seperate COM Port config for each Function
+
+sx4.py can run as stand alone
+
+ATSP0 and ATDPN REMOVED
+
+faster than any previous (honda city) versions.
+
+
+db.py modded according to sx4 sensors
+
+tst.py modded to run on PC version

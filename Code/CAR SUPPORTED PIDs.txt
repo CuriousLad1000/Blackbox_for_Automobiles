@@ -1,0 +1,73 @@
+
+
+
+
+
+
+ATZ    # RESETS OBD SCANNER AND TELLS VERSION 
+
+ATRV   # TELLS BATTERY VOLTAGE 
+
+ATDP   # DESCRIBE THE CURRENT PROTOCOL 
+
+````ATDPN  # DESCRIBE CURRENT PROTOCOL BY NUMBER    
+
+````ATSP0  # SETS TO AUTOMATIC PROTOCOL DETECTION
+
+AT@1   # DISPLAY DEVICE DESCRIPTION   
+
+
+0100   #  TELLS PID SUPPORTED      
+
+
+
+```0103  Fuel System Status                                       2B       fs1 and fs2
+
+
+0104  calculated load value                                    1B     A*100/255    in %
+
+0106  SFT bank 1       1B   (A-128) * 100/128
+
+0107  LFT bank 1       1B   (A-128) * 100/128
+
+010c                            RPM            2B         ((A*256)+B)/4  
+
+010d  Speed              1B                                  A   
+
+010e  ign. timing adv. for cylinder 1             1B      A/2 - 64
+
+010f intake air temp.                          2B   gm/s   ((A*256)+B) / 100
+
+0110 air flow rate                               MAF RATE     2Bytes              ((A*256)+B) / 100    
+
+0111 absolute throttle pos.    1B      A*100/255   
+
+```0114 bank 1 sensor 1                                               2B     ----chk   
+
+```0115 bank 1 sens 2                                                  2B    - ---chk
+
+011f  time since engine start                                   2B         (max 65535 sec)       (A*256)+B
+
+0121 Dist travelled with mil on                               2B         (max 65535 sec)       (A*256)+B
+      
+012e Commanded Evaporative purge                     1B                              100*A/255
+
+0130 no. of warmups since dtc codes cleared          1B                               A
+
+0131 dist. since dtc cleared.                                     2B                             (A*256)+B 
+
+0133 Barometric pressure                                        1B                              A      Kpa (Absolute)
+
+0142 control module voltage                                  2B                              ((A*256)+B)/1000
+
+0143 absolute load value                                         2B                              ((A*256)+B)*100/255          in %
+
+0145 relative throttle pos                                        1B                              A*100/255                            in %
+
+0147 absolute throttle pos B                                    1B                              A*100/255                            in %
+
+0149 accelerator pedal pos D                                   1B                              A*100/255                            in %
+
+014a accelerator pedal pos E                                    1B                              A*100/255                            in %
+
+014c commanded throttle actuator control              1B                              A*100/255                            in %
