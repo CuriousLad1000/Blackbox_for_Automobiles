@@ -7,14 +7,14 @@ import sys
 #NOTE 2 OUTPUT BUFFER IS THE BUFFER USED TO STORE DATA TO TRANSMIT TO DEVICE.
 
 # example 2  USING READLINES() FUNCTION
-#port = serial.Serial("COM5", baudrate=38400, timeout=.5,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+#port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.5,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
 
 #========================================================================================================================================
 # COMMAND:-  ATZ    # RESETS OBD SCANNER AND TELLS VERSION
 # EXPECTED OUTPUT :-  ELM327 v1.3a OBDGPSLogger
 def reset():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=1,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=1,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
 #  print ("Could Not open Serial Port")
   return "Port open Error"
@@ -42,7 +42,7 @@ def reset():
 # EXPECTED OUTPUT :-  11.3  (RANDOM)
 def bat():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -67,7 +67,7 @@ def bat():
 # EXPECTED OUTPUT :-  Automatic
 def protocol():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
 #  print ("Could Not open Serial Port")
   return "Port open Error"
@@ -93,7 +93,7 @@ def protocol():
 # EXPECTED OUTPUT :-  OBDGPSLogger
 def device():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
 # print ("Could Not open Serial Port")
   return "Port open Error"
@@ -119,7 +119,7 @@ def device():
 # EXPECTED OUTPUT :-  41 00 BE 3E B8 00 
 def support():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.015,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
 #  print ("Could Not open Serial Port")
   return "Port open Error"
@@ -146,7 +146,7 @@ def support():
 # EXPECTED OUTPUT :-  hex no.
 def rpm():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -156,7 +156,7 @@ def rpm():
  try:
   port.write(i+"\r")
   lst9= (port.readlines())        # Note that this function only returns on a timeout.
-  i0=lst9[1].rstrip(' \r\r>')
+  i0=lst9[0].rstrip(' \r\r>')
   i1 = (i0[-5:]).replace(" ", "")
   i2 = (int(i1, base=16))/4
   print (i2)
@@ -173,7 +173,7 @@ def rpm():
 # EXPECTED OUTPUT :-  hex no.
 def speed():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -198,7 +198,7 @@ def speed():
 # EXPECTED OUTPUT :-  hex no.
 def enginet():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -223,7 +223,7 @@ def enginet():
 # EXPECTED OUTPUT :-  hex no.
 def throttle():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -248,7 +248,7 @@ def throttle():
 # EXPECTED OUTPUT :-  hex no.
 def sft():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -273,7 +273,7 @@ def sft():
 # EXPECTED OUTPUT :-  hex no.
 def lft():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -298,7 +298,7 @@ def lft():
 # EXPECTED OUTPUT :-  hex no.
 def timingadv():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -323,7 +323,7 @@ def timingadv():
 # EXPECTED OUTPUT :-  hex no.
 def airtemp():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -348,7 +348,7 @@ def airtemp():
 # EXPECTED OUTPUT :-  hex no.
 def maf():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -374,7 +374,7 @@ def maf():
 # EXPECTED OUTPUT :-  hex no.
 def est():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -400,7 +400,7 @@ def est():
 # EXPECTED OUTPUT :-  hex no.
 def mildist():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -426,7 +426,7 @@ def mildist():
 # EXPECTED OUTPUT :-  hex no.
 def load():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -451,7 +451,7 @@ def load():
 # EXPECTED OUTPUT :-  hex no.
 def evappurge():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -476,7 +476,7 @@ def evappurge():
 # EXPECTED OUTPUT :-  hex no.
 def warmups():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -501,7 +501,7 @@ def warmups():
 # EXPECTED OUTPUT :-  hex no.
 def dtcdist():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -527,7 +527,7 @@ def dtcdist():
 # EXPECTED OUTPUT :-  hex no.
 def baro():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -552,7 +552,7 @@ def baro():
 # EXPECTED OUTPUT :-  hex no.
 def cmv():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -578,7 +578,7 @@ def cmv():
 # EXPECTED OUTPUT :-  hex no.
 def absld():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -604,7 +604,7 @@ def absld():
 # EXPECTED OUTPUT :-  hex no.
 def relthrottle():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -629,7 +629,7 @@ def relthrottle():
 # EXPECTED OUTPUT :-  hex no.
 def absthrottleB():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -654,7 +654,7 @@ def absthrottleB():
 # EXPECTED OUTPUT :-  hex no.
 def accelposD():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -679,7 +679,7 @@ def accelposD():
 # EXPECTED OUTPUT :-  hex no.
 def accelposE():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()
@@ -704,7 +704,7 @@ def accelposE():
 # EXPECTED OUTPUT :-  hex no.
 def throttleact():
  try:
-  port = serial.Serial("COM5", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
+  port = serial.Serial("/dev/ttyUSB0", baudrate=38400, timeout=.07,bytesize=8,stopbits=1)  # CONFIGURE TIMEOUT FOR READLINES()
  except:
   print ("Could Not open Serial Port")
   sys.exit()

@@ -1,12 +1,12 @@
 import sx4
-import OBDGPS
+#import OBDGPS
 import db
 import serial
 import sqlite3
-from adxl345 import ADXL345
+#from adxl345 import ADXL345
 import time
   
-adxl345 = ADXL345()
+#adxl345 = ADXL345()
 
 rst=sx4.reset()
 print(rst)
@@ -105,39 +105,54 @@ while True:
  
  #=================ACCEL=====================
 
- axes = adxl345.getAxes(True)
+# axes = adxl345.getAxes(True)
  time.sleep(.2)
- acx = axes['x']
+# acx = axes['x']
+ acx = "x"
  print acx
- acy = axes['y']
+# acy = axes['y']
+ acy = "y"
  print acy
- acz = axes['z']
+# acz = axes['z']
+ acz = "z"
  print acz
  db.data(battery,rpm,speed,absld,load,evappurge,maf,timingadv,throttle,relthrottle,absthrottleB,accelposD,accelposE,throttleact,enginet,airtemp,baro,sft,lft,cmv,est,mildist,warmups,dtcdist,acx,acy,acz)
 
  #================ GPS LOG ============================
  
- mode=OBDGPS.mode()
- print mode
- lat=OBDGPS.latitude()
- print lat
- lon=OBDGPS.longitude()
- print lon
- alt=OBDGPS.altitude()
- print alt
- speed=OBDGPS.speed()
- print speed
- climb=OBDGPS.climb()
- print climb
- laterr=OBDGPS.latierr()
- print laterr
- longerr=OBDGPS.longierr()
- print longerr
- verterr=OBDGPS.vertierr()
- print verterr
- heading=OBDGPS.heading()
- print heading
- gpst=OBDGPS.gpst()
- print gpst
+# mode=OBDGPS.mode()
+# print mode
+# lat=OBDGPS.latitude()
+# print lat
+# lon=OBDGPS.longitude()
+# print lon
+# alt=OBDGPS.altitude()
+# print alt
+# speed=OBDGPS.speed()
+# print speed
+# climb=OBDGPS.climb()
+# print climb
+# laterr=OBDGPS.latierr()
+# print laterr
+# longerr=OBDGPS.longierr()
+# print longerr
+# verterr=OBDGPS.vertierr()
+# print verterr
+# heading=OBDGPS.heading()
+# print heading
+# gpst=OBDGPS.gpst()
+# print gpst
+ mode = 1
+ lat = 2
+ lon = 3
+ alt = 4
+ speed = 5
+ climb = 6
+ laterr = 7
+ longerr = 8
+ verterr = 9
+ heading = 10
+ gpst = 11
+ 
  db.gps_data(mode,lat,lon,alt,speed,climb,laterr,longerr,verterr,heading,gpst)
  

@@ -8,8 +8,8 @@ a=strftime("%d-%m-%Y--%H#%M#%S")
 
 def create_base():
     
-# conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
- conn = sqlite3.connect(a+'.db')
+ conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
+# conn = sqlite3.connect(a+'.db')
 
  conn.execute('''CREATE TABLE OBD_INIT
        (ID INTEGER PRIMARY KEY   AUTOINCREMENT    NOT NULL,
@@ -72,8 +72,7 @@ def create_base():
 #=======================================================================
 
 def create_db(rst,pro,dev,sup):
- #conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
- conn = sqlite3.connect(a+'.db')
+ conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
  da=strftime("%H:%M:%S")
  conn.execute("INSERT INTO OBD_INIT(TIME,RESET,PROTOCOL,DEVICE,SUPPORTED_PIDs) VALUES(?,?,?,?,?)", (da,rst,pro,dev,sup));
  conn.commit()
@@ -83,8 +82,7 @@ def create_db(rst,pro,dev,sup):
 
 def data(battery,rpm,speed,absld,load,evappurge,maf,timingadv,throttle,relthrottle,absthrottleB,accelposD,accelposE,throttleact,enginet,airtemp,baro,sft,lft,cmv,est,mildist,warmups,dtcdist,acx,acy,acz):
    
- #conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
- conn = sqlite3.connect(a+'.db')
+ conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
  da=strftime("%H:%M:%S")
  conn.execute("INSERT INTO OBD_DATA(TIME,BATTERY,RPM,SPEED,Abs_LOAD,Calc_LOAD,Cmd_Evap_PURGE,MAF,TIMING_ADV,THROTTLE,Rel_T_Pos,Abs_T_PosB,ACCEL_PosD,ACCEL_PosE,Cmd_THROTTLE_ACTUATOR_CTRL,ENGINE_TEMP,INTAKE_AIR_TEMP,BARO_PRESSURE,SHORT_FUEL_TRIM,LONG_FUEL_TRIM,CTRL_MOD_VOLT,ENGINE_RUN_TIME,MIL_DIST,WARMUPs_DTC_CLR,DIST_DTC_CLR,ACCEL_X_G,ACCEL_Y_G,ACCEL_Z_G) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (da,battery,rpm,speed,absld,load,evappurge,maf,timingadv,throttle,relthrottle,absthrottleB,accelposD,accelposE,throttleact,enginet,airtemp,baro,sft,lft,cmv,est,mildist,warmups,dtcdist,acx,acy,acz));
  conn.commit()
@@ -94,8 +92,8 @@ def data(battery,rpm,speed,absld,load,evappurge,maf,timingadv,throttle,relthrott
 
 def gps_data(mode,lat,lon,alt,speed,climb,laterr,longerr,verterr,heading,gpst):
    
-# conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
- conn = sqlite3.connect(a+'.db')
+ conn = sqlite3.connect('/home/pi/BB/DATABASE/'+a+'.db')
+# conn = sqlite3.connect(a+'.db')
  
  da=strftime("%H:%M:%S")
 
