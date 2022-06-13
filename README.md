@@ -1,0 +1,3 @@
+# Blackbox_for_Automobiles
+
+Most people associate black boxes with aeroplanes but they are no longer just the key tool in investigating aeroplane accidents. The event data recorder (EDR) is slowly gaining an important role in the investigation of car accidents as well...
