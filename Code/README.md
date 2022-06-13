@@ -1,3 +1,5 @@
+## Speed optimization tips.
+
 You're not shifting a huge amount of data, so I don't think higher data rates than that are going to make much of a difference. 
 If that doesn't work, try 38400.
 
