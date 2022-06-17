@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The problem of road accidents has plagued the world for a very long time. According to the popular statistic published by The World Health Organization, “*Road traffic injuries are the leading cause of death among children and young adults*”. Furthermore, 93% of the world’s 1.3 million road traffic deaths occur in the developing countries. Also, almost 3 to 5% of a country’s GDP is lost annually due to road accidents in the developing countries.
+The problem of road accidents has plagued the world for a very long time. According to the popular statistic published by The World Health Organization, “<i>**Road traffic injuries are the leading cause of death among children and young adults**</i>”. Furthermore, 93% of the world’s 1.3 million road traffic deaths occur in the developing countries. Also, almost 3 to 5% of a country’s GDP is lost annually due to road accidents in the developing countries.
 
 The problem still persists despite an increase in the attempts to changing traffic rules and guidelines. One of the reasons the roads are not safer is due to the lack of accurate data in high detail on the accidents. Getting accurate data will help researchers analyze the causes behind the car accidents, whether due to the machine error or a human error. This will help in making the roads safer and will help in studying the general human behaviour while driving a car to help figure out potential situations where specific habits may lead to an increase in accidents. This will help make the roads safer than ever.
 
