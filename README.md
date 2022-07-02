@@ -71,8 +71,6 @@ The project Black Box was inspired by the real accidental data recorder used in 
 <br/>
 <br/>
 
-<br/>
-
 <p align="Center">
   <img src="/osama.tasneem/Blackbox_for_Automobiles/wiki/raw/images/4ba5479e8fb5e85b50eae9bade861670.jpeg">
 </p>
