@@ -64,7 +64,7 @@ The project Black Box was inspired by the real accidental data recorder used in 
 **Pics of our prototype built.**
 
 <p align="Center">
-  <img src="/osama.tasneem/Blackbox_for_Automobiles/wiki/raw/images/e6bf31870123999e85e8957671828228.jpeg">
+  <img src="https://raw.githubusercontent.com/wiki/CuriousLad1000/Blackbox_for_Automobiles/images/e6bf31870123999e85e8957671828228.jpeg">
 </p>
 
 
@@ -72,13 +72,13 @@ The project Black Box was inspired by the real accidental data recorder used in 
 <br/>
 
 <p align="Center">
-  <img src="/osama.tasneem/Blackbox_for_Automobiles/wiki/raw/images/4ba5479e8fb5e85b50eae9bade861670.jpeg">
+  <img src="https://raw.githubusercontent.com/wiki/CuriousLad1000/Blackbox_for_Automobiles/images/4ba5479e8fb5e85b50eae9bade861670.jpeg">
 </p>
 
 <br/>
 
 <p align="Center">
-  <img src="/osama.tasneem/Blackbox_for_Automobiles/wiki/raw/images/813f95a2e8c8589f319b5fe85e010c29.jpeg">
+  <img src="https://raw.githubusercontent.com/wiki/CuriousLad1000/Blackbox_for_Automobiles/images/813f95a2e8c8589f319b5fe85e010c29.jpeg">
 </p>
 
 <br/>
@@ -88,7 +88,7 @@ The project Black Box was inspired by the real accidental data recorder used in 
 **Sample Logged Data**
 
 <p align="Center">
-  <img src="/osama.tasneem/Blackbox_for_Automobiles/wiki/raw/images/d2fdec2b380311a8cdd6b5741b138162.png">
+  <img src="https://raw.githubusercontent.com/wiki/CuriousLad1000/Blackbox_for_Automobiles/images/d2fdec2b380311a8cdd6b5741b138162.png">
 </p>
 
 
